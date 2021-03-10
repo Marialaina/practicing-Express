@@ -4,6 +4,7 @@ const express = require('express');
 //Creating the express app
 const app = express();
 
+app.set("view engine", "ejs");
 //Define a "root" route directly on app
 //app.get is a method (function)
 app.get('/', function(req, res){
@@ -11,7 +12,7 @@ app.get('/', function(req, res){
 });
 
 app.get(`/home`, function(req, res){
-    res.send(`<h1> Home Page </h1>`);
+    res.render('home');
 })
 
 //Tell the app to listen on port 3000
