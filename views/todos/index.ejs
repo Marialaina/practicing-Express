@@ -8,6 +8,18 @@
     <h1> Home Page! </h1>
 </head>
 <body>
+    <!-- <% %> these tags add javascript  -->
+    <h1>Todos</h1>
+    <ul>
+        <% todos.forEach(function(todo){ %>
+            <li>
+                <%= todo.text %>
+                -
+                <%= todo.done ? 'done' : 'not done' %>
+            </li>
+
+      <%  }); %>
+    </ul>
     
 </body>
 </html>
